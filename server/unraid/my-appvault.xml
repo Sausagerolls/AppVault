@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>appvault</Name>
+  <Repository>ghcr.io/sausagerolls/appvault-server:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Sausagerolls/AppVault/issues</Support>
+  <Project>https://github.com/Sausagerolls/AppVault</Project>
+  <Overview>AppVault server. Stores macOS apps offloaded from your Mac so you can restore them when needed. The library lives on the mounted Storage path, never inside the container. Each category is a folder.</Overview>
+  <Category>Tools: Backup:</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/Sausagerolls/AppVault/main/server/unraid/my-appvault.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/Sausagerolls/AppVault/main/server/unraid/appvault-icon.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="API Port" Target="8420" Default="8420" Mode="tcp" Description="Port the Mac app connects to." Type="Port" Display="always" Required="true" Mask="false">8420</Config>
+  <Config Name="Storage" Target="/data" Default="/mnt/user/appvault" Mode="rw" Description="Share where app archives are stored. One folder per category." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appvault</Config>
+  <Config Name="API Token" Target="APPVAULT_TOKEN" Default="" Mode="" Description="Secret token (min 16 chars). Generate with: openssl rand -hex 24. Enter the same token in the Mac app." Type="Variable" Display="always" Required="true" Mask="true"></Config>
+</Container>

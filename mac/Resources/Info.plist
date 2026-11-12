@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key><string>AppVault</string>
+    <key>CFBundleDisplayName</key><string>AppVault</string>
+    <key>CFBundleIdentifier</key><string>local.appvault.mac</string>
+    <key>CFBundleExecutable</key><string>AppVault</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleShortVersionString</key><string>1.0.0</string>
+    <key>CFBundleVersion</key><string>1</string>
+    <key>CFBundleIconFile</key><string>AppIcon</string>
+    <key>LSMinimumSystemVersion</key><string>14.0</string>
+    <key>LSApplicationCategoryType</key><string>public.app-category.utilities</string>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSAppleEventsUsageDescription</key><string>AppVault asks for an administrator password to delete apps owned by the system.</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <!-- The server runs on your LAN/VPN over plain HTTP. -->
+        <key>NSAllowsArbitraryLoads</key><true/>
+        <key>NSAllowsLocalNetworking</key><true/>
+    </dict>
+    <key>NSLocalNetworkUsageDescription</key><string>AppVault connects to your AppVault server on the local network.</string>
+</dict>
+</plist>
